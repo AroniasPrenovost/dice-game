@@ -1,4 +1,3 @@
-
 function rollDice(){
 
 	function shuffle(array) {
@@ -6,7 +5,7 @@ function rollDice(){
 		temporaryValue,
 		randomIndex;
 
-// While there remain elements to shuffle...
+// While there remain elementsd to shuffle...
 while (0 !== currentIndex) {
 // Pick a remaining element...
 randomIndex = Math.floor(Math.random() * currentIndex);
@@ -20,124 +19,78 @@ array[randomIndex] = temporaryValue;
 return array;
 }
 
-var rolls = [];
-var dice = [1, 2, 3, 4, 5, 6];
-var dice2 = [1, 2, 3, 4, 5, 6];
-var roll1 = shuffle(dice)[0];
-var roll2 = shuffle(dice2)[0];
-// alert(roll1);
+var diceSides = [1, 2, 3, 4, 5, 6];
+var diceSides2 = [1, 2, 3, 4, 5, 6];
+var roll1 = shuffle(diceSides)[0];
+var roll2 = shuffle(diceSides2)[0];
 
+dice1 = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 
-// hacky implementation for dice 1 
-dice1 = '&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;<br>&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;111';
-function d1(){
-	document.getElementById("dice1").innerHTML = dice1;
-}
+dice2 = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 
-dice2 = '&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;<br>&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;222';
-function d2(){
-	document.getElementById("dice1").innerHTML = dice2;
-}
+dice3 = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
 
-dice3 = '&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;<br>&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;333';
-function d3(){
-	document.getElementById("dice1").innerHTML = dice3;
-}
+dice4 = '&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;';
 
-dice4 = '&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;<br>&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;000';
-function d4(){
-	document.getElementById("dice1").innerHTML = dice4;
-}
+dice5 = '&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;';
 
-dice5 = '&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;<br>&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;<br>&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;';
-function d5(){
-	document.getElementById("dice1").innerHTML = dice5;
-}
-
-dice6 = '&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;0<br>&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;<br>&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;0';
-function d6(){
-	document.getElementById("dice1").innerHTML = dice6;
-}
-
-
-// hacky implementation for dice 1 
-if (roll1 === 1) {
-	d1();
-} 
-
-if (roll1 === 2) {
-	d2();
-} 
-
-if (roll1 === 3) {
-	d3();
-} 
-
-if (roll1 === 4) {
-	d4();
-} 
-
-if (roll1 === 5) {
-	d5();
-} 
-
-if (roll1 === 6) {
-	d6();
-} 
-
-// hacky implementation for dice 2 
-function d12(){
-	document.getElementById("dice2").innerHTML = dice1;
-}
-
-function d22(){
-	document.getElementById("dice2").innerHTML = dice2;
-}
-
-function d32(){
-	document.getElementById("dice2").innerHTML = dice3;
-}
-
-
-function d42(){
-	document.getElementById("dice2").innerHTML = dice4;
-}
-
-function d52(){
-	document.getElementById("dice2").innerHTML = dice5;
-}
-
-
-function d62(){
-	document.getElementById("dice2").innerHTML = dice6;
-}
-// hacky implementation for dice 2
-
-if (roll2 === 1) {
-	d12();
-} 
-
-if (roll2 === 2) {
-	d22();
-} 
-
-if (roll2 === 3) {
-	d32();
-} 
-
-if (roll2 === 4) {
-	d42();
-} 
-
-if (roll2 === 5) {
-	d52();
-} 
-
-if (roll2 === 6) {
-	d62();
-} 
+dice6 = '&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;';
 
 console.log(roll1 + ' ' + roll2);
+
+function dtest(){
+	if (roll1 === 1) {
+		document.getElementById("dice1").innerHTML = dice1;
+	} 
+
+	if (roll1 === 2) {
+		document.getElementById("dice1").innerHTML = dice2;
+	} 
+
+	if (roll1 === 3) {
+		document.getElementById("dice1").innerHTML = dice3;
+	} 
+
+	if (roll1 === 4) {
+		document.getElementById("dice1").innerHTML = dice4;
+	} 
+
+	if (roll1 === 5) {
+		document.getElementById("dice1").innerHTML = dice5;
+	} 
+
+	if (roll1 === 6) {
+		document.getElementById("dice1").innerHTML = dice6;
+	} 
+
+	if (roll2 === 1) {
+		document.getElementById("dice2").innerHTML = dice1;
+	} 
+
+	if (roll2 === 2) {
+		document.getElementById("dice2").innerHTML = dice2;
+	} 
+
+	if (roll2 === 3) {
+		document.getElementById("dice2").innerHTML = dice3;
+	} 
+
+	if (roll2 === 4) {
+		document.getElementById("dice2").innerHTML = dice4;
+	} 
+
+	if (roll2 === 5) {
+		document.getElementById("dice2").innerHTML = dice5;
+	} 
+
+	if (roll2 === 6) {
+		document.getElementById("dice2").innerHTML = dice6;
+	} 
+
+
+}
+
+dtest();
 
 }
 
