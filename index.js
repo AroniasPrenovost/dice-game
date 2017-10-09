@@ -1,9 +1,9 @@
 function rollDice(){
 
-	function shuffle(array) {
-		var currentIndex = array.length,
-		temporaryValue,
-		randomIndex;
+  function shuffle(array) {
+    var currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
 
 // While there remain elementsd to shuffle...
 while (0 !== currentIndex) {
@@ -36,62 +36,25 @@ dice5 = '&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbs
 
 dice6 = '&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;';
 
-console.log(roll1 + ' ' + roll2);
+var dealerSpeak = "You rolled a " + roll1 + " and a " + roll2 + ". Nice!";
+document.getElementById("rollResult").innerHTML = dealerSpeak;
+console.log(dealerSpeak);
 
-function dtest(){
-	if (roll1 === 1) {
-		document.getElementById("dice1").innerHTML = dice1;
-	} 
-
-	if (roll1 === 2) {
-		document.getElementById("dice1").innerHTML = dice2;
-	} 
-
-	if (roll1 === 3) {
-		document.getElementById("dice1").innerHTML = dice3;
-	} 
-
-	if (roll1 === 4) {
-		document.getElementById("dice1").innerHTML = dice4;
-	} 
-
-	if (roll1 === 5) {
-		document.getElementById("dice1").innerHTML = dice5;
-	} 
-
-	if (roll1 === 6) {
-		document.getElementById("dice1").innerHTML = dice6;
-	} 
-
-	if (roll2 === 1) {
-		document.getElementById("dice2").innerHTML = dice1;
-	} 
-
-	if (roll2 === 2) {
-		document.getElementById("dice2").innerHTML = dice2;
-	} 
-
-	if (roll2 === 3) {
-		document.getElementById("dice2").innerHTML = dice3;
-	} 
-
-	if (roll2 === 4) {
-		document.getElementById("dice2").innerHTML = dice4;
-	} 
-
-	if (roll2 === 5) {
-		document.getElementById("dice2").innerHTML = dice5;
-	} 
-
-	if (roll2 === 6) {
-		document.getElementById("dice2").innerHTML = dice6;
-	} 
-
-
-}
-
-dtest();
-
+// Matches dice #'s number to dice
+var dShapes = [dice1, dice2, dice3, dice4, dice5, dice6];
+var dShapes2 = [dice1, dice2, dice3, dice4, dice5, dice6];
+for (var i = 1; i < 7; i++) {
+  if (roll1 === i) {
+    document.getElementById("dice1").innerHTML = dShapes[0];
+    dShapes.shift();
+  } 
+  dShapes.shift();
+  if (roll2 === i) {
+    document.getElementById("dice2").innerHTML = dShapes2[0];
+    dShapes2.shift();
+  } 
+  dShapes2.shift();
+  }
 }
 
 document.getElementById("rollDice").onclick = rollDice;
