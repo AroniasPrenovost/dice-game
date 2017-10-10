@@ -20,6 +20,7 @@ img {
 	margin: auto;
 	margin-top:20vh;
 	margin-bottom:20vh;
+	background-size: cover;
 }
 
 .wrapper {
@@ -63,7 +64,7 @@ img {
 	.dice {
 		font-size:2em;
 		font-weight:900;
-				margin-top:20%;
+		margin-top:20%;
 	} 
 
 	#dice1, #dice2 {
@@ -77,6 +78,21 @@ img {
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
+	#rollResult {
+		font-size:2.5em;
+	}
+	.dice {
+		font-size:4em;
+		font-weight:900;
+		margin-top:20%;
+	} 
+
+	#dice1, #dice2 {
+		min-height:100px;
+		min-width:110px;
+		line-height: 40%;
+	}
+
 }
 
 /* Medium Devices, Desktops */
@@ -87,14 +103,18 @@ img {
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
-	#dice1 {
-		line-height: 50%;
-		padding-bottom:20px;
+	.dice {
+		margin-top:5%;
 	}
+}
+#dice1 {
+	line-height: 50%;
+	padding-bottom:20px;
+}
 
-	#dice2 {
-		line-height: 50%;
-		padding-bottom:20px;
-	}
+#dice2 {
+	line-height: 50%;
+	padding-bottom:20px;
+}
 
 }
