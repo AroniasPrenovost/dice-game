@@ -1,5 +1,5 @@
 function rollDice(){
-
+  
   function shuffle(array) {
     var currentIndex = array.length,
     temporaryValue,
@@ -36,9 +36,7 @@ dice5 = '&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;&nbs
 
 dice6 = '&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;<br>&nbsp;.&nbsp;&nbsp;&nbsp;.&nbsp;';
 
-var dealerSpeak = "You rolled a " + roll1 + " and a " + roll2 + ". Nice!";
-document.getElementById("rollResult").innerHTML = dealerSpeak;
-console.log(dealerSpeak);
+
 
 // Matches dice #'s number to dice
 var dShapes = [dice1, dice2, dice3, dice4, dice5, dice6];
@@ -46,15 +44,22 @@ var dShapes2 = [dice1, dice2, dice3, dice4, dice5, dice6];
 for (var i = 1; i < 7; i++) {
   if (roll1 === i) {
     document.getElementById("dice1").innerHTML = dShapes[0];
+    document.getElementById("dice1").style.backgroundColor="red";
     dShapes.shift();
   } 
   dShapes.shift();
+
   if (roll2 === i) {
     document.getElementById("dice2").innerHTML = dShapes2[0];
+    document.getElementById("dice2").style.backgroundColor="red";
     dShapes2.shift();
   } 
   dShapes2.shift();
-  }
+}
+
+var dealerSpeak = "You rolled a " + roll1 + " and a " + roll2 + ". Nice!";
+document.getElementById("rollResult").innerHTML = dealerSpeak;
+console.log(dealerSpeak);
 }
 
 document.getElementById("rollDice").onclick = rollDice;

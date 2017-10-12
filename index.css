@@ -1,120 +1,58 @@
 body {
 	background-image: url("http://www.myenglishlanguage.com/wp-content/uploads/2012/05/blackjack.jpg");
-	background-repeat: no-repeat;
-	background-size:cover;
-	height:100vh;
+	background-size: cover;
+	background-position: center; 
 }
 
-#rollResult {
-	font-size:3em;
-	color:#fff;
-	text-align: center;
-	margin-top:2.5%;
-	margin-bottom:2.5%;
+body,
+html {
+	width: 100%;
+	height: 100%;
+	font-family: "Lato";
+	color: white;
 }
 
 img {
-	height:15vh;
-	width:25vh;
-	display: block;
-	margin: auto;
-	margin-top:20vh;
-	margin-bottom:20vh;
-	background-size: cover;
+	height:100px;
+	width:120px;
 }
 
-.wrapper {
-	width: 100%;
-	margin-top:50px;
-	position: fixed;
+#rollResult {
+	font-weight: 700;
+	font-size: 4em;
+}
+
+
+.content{
+	padding-top: 5%; 
 	text-align: center;
-	background-color:#16a085;
-	height:100%;
-}
-
-.dice {
-	display: inline-block; 
-	font-size:3vw;
-	font-weight:900;
-	margin:1.5%;
-	margin-top:2.5%;
+	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+	0px 8px 13px rgba(0,0,0,0.1),
+	0px 18px 23px rgba(0,0,0,0.1);
 }
 
 #dice1, #dice2 {
-	width:100%;
-	line-height: 10%;
-	background-color:#fff;
+	height:100px;
+	width: 100px;
+	background-color:transparent;
+	font-weight: 700;
+	font-size: 4.5em;
+	line-height:35%;
 }
 
 #dice1 {
 	float:left;
+	margin-left:40%;
 }
 
 #dice2 {
 	float:right;
+	margin-right:40%;
 }
 
-
-
-/* Extra Small Devices, Phones */ 
-@media only screen and (max-width : 480px) {
-	#rollResult {
-		font-size:1.5em;
-	}
-	.dice {
-		font-size:2em;
-		font-weight:900;
-		margin-top:20%;
-	} 
-
-	#dice1, #dice2 {
-		min-height:55px;
-		min-width:55px;
-		line-height: 50%;
-	}
-
+hr {
+	width: 400px;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
-
-	#rollResult {
-		font-size:2.5em;
-	}
-	.dice {
-		font-size:4em;
-		font-weight:900;
-		margin-top:20%;
-	} 
-
-	#dice1, #dice2 {
-		min-height:100px;
-		min-width:110px;
-		line-height: 40%;
-	}
-
-}
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) {
-
-}
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width : 1200px) {
-
-	.dice {
-		margin-top:5%;
-	}
-}
-#dice1 {
-	line-height: 50%;
-	padding-bottom:20px;
-}
-
-#dice2 {
-	line-height: 50%;
-	padding-bottom:20px;
-}
-
-}
